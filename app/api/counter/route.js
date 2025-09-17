@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import clientPromise from "../../../lib/mongodb"; // relative path
+import getClientPromise from "../../../lib/mongodb";
 
 const DB_NAME = "wedding";
 const COLLECTION = "counters";
@@ -7,7 +7,7 @@ const COUNTER_ID = "teams";
 
 export async function GET() {
   try {
-    const client = await clientPromise;
+    const client = await getClientPromise();
     const col = client.db(DB_NAME).collection(COLLECTION);
 
     const doc = await col.findOne(
@@ -22,16 +22,16 @@ export async function GET() {
   } catch (err) {
     console.error("GET /api/counter error:", err);
     return NextResponse.json(
-      { error: String(err.message || err) },
+      { error: String(err?.message || err) },
       { status: 500 }
     );
   }
 }
+
 export async function POST(req) {
   try {
     const url = new URL(req.url);
     const team = url.searchParams.get("team");
-
     if (!team || !["vikings", "packers"].includes(team)) {
       return NextResponse.json(
         { error: "team must be 'vikings' or 'packers'" },
@@ -39,10 +39,9 @@ export async function POST(req) {
       );
     }
 
-    const client = await clientPromise;
+    const client = await getClientPromise();
     const col = client.db(DB_NAME).collection(COLLECTION);
 
-    // Only set the *other* field on insert to avoid conflicts with $inc
     const setOnInsert = team === "vikings" ? { packers: 0 } : { vikings: 0 };
 
     await col.updateOne(
@@ -63,7 +62,7 @@ export async function POST(req) {
   } catch (err) {
     console.error("POST /api/counter error:", err);
     return NextResponse.json(
-      { error: String(err.message || err) },
+      { error: String(err?.message || err) },
       { status: 500 }
     );
   }

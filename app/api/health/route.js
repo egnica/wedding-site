@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
 
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   // Don’t echo the whole URI, just confirm it exists
   const hasUri = !!process.env.MONGODB_URI;

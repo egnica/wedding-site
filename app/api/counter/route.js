@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import getClientPromise from "../../../lib/mongodb";
 
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 const DB_NAME = "wedding";
 const COLLECTION = "counters";
 const COUNTER_ID = "teams";

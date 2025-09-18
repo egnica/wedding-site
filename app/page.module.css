@@ -1,0 +1,54 @@
+.alexbrushregular {
+  font-family: "Alex Brush", cursive;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 90px;
+}
+
+.backVikeHelm {
+  z-index: -10;
+  width: 10%;
+  position: absolute;
+  opacity: 40%;
+}
+.backPackHelm {
+  background-image: url("https://nciholasegner.s3.us-east-2.amazonaws.com/leslieWedding/pack-helm.png");
+}
+
+.scoreboardText {
+  text-align: center;
+  margin: 0;
+  letter-spacing: 40px;
+}
+.scoreCont {
+  display: flex;
+  gap: 2%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.trioCont {
+  display: flex;
+  gap: 1%;
+  justify-content: center;
+  align-items: center;
+}
+.textCont {
+  text-align: center;
+}
+.savethedatetext {
+  font-size: 60px;
+  font-weight: 100;
+  letter-spacing: 30px;
+}
+
+@media screen and (min-width: 740px) {
+  .textCont {
+    text-align: center;
+  }
+  .savethedatetext {
+    font-size: 40px;
+    font-weight: 100;
+  }
+}

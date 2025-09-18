@@ -1,5 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+import styles from "../page.module.css";
+import TrioPicture from "../components/trioPicture";
+const AddToCalendarButton = dynamic(
+  () => import("../components/calendarButton"),
+  {
+    ssr: false,
+  }
+);
 
 export default function VikingsPage() {
   const [counts, setCounts] = useState({ vikings: 0, packers: 0 });
@@ -17,10 +26,23 @@ export default function VikingsPage() {
   }, []);
 
   return (
-    <main className="p-8">
-      <h1 className="text-3xl font-bold mb-4">Skol! Vikings Page</h1>
-      <p>Vikings: {counts.vikings}</p>
-      <p>Packers: {counts.packers}</p>
+    <main>
+      <p className={styles.scoreboardText}>SCOREBOARD</p>
+      <div className={styles.scoreCont}>
+        <div>
+          <h1>Vikings</h1>
+          <h1>{counts.vikings}</h1>
+        </div>
+        <div
+          style={{ backgroundColor: "black", width: "1px", height: "100px" }}
+        ></div>
+        <div>
+          <h1>Packers</h1>
+          <h1>{counts.packers}</h1>
+        </div>
+      </div>
+
+      <TrioPicture />
     </main>
   );
 }

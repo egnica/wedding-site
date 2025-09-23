@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import styles from "../page.module.css";
 import TrioPicture from "../components/trioPicture";
@@ -11,7 +12,7 @@ const AddToCalendarButton = dynamic(
 );
 
 export default function VikingsPage() {
-  const [counts, setCounts] = useState({ vikings: 0, packers: 0 });
+  const [counts, setCounts] = useState({ vikings: "-", packers: "-" });
 
   useEffect(() => {
     async function hit() {
@@ -27,8 +28,19 @@ export default function VikingsPage() {
 
   return (
     <main>
-      <p className={styles.scoreboardText}>SCOREBOARD</p>
-      <div className={styles.scoreCont}>
+      <div style={{ paddingTop: "40px" }}></div>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className={styles.scoreboardText}
+      >
+        SCOREBOARD
+      </motion.p>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className={styles.scoreCont}
+      >
         <div>
           <h1>Vikings</h1>
           <h1>{counts.vikings}</h1>
@@ -40,9 +52,11 @@ export default function VikingsPage() {
           <h1>Packers</h1>
           <h1>{counts.packers}</h1>
         </div>
-      </div>
+      </motion.div>
 
       <TrioPicture />
+
+      <div style={{ paddingTop: "40px" }}></div>
     </main>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+
 import dynamic from "next/dynamic";
 import styles from "../page.module.css";
 import { motion } from "framer-motion";
@@ -60,9 +60,11 @@ function TrioPicture() {
         />
       </div>
       <div className={styles.textCont}>
-        <h1 className={styles.savethedatetext}>
-          SAVE <span className={styles.alexbrushregular}>the</span> DATE
-        </h1>
+        <div className={styles.saveDateCont}>
+          <h1 className={styles.savethedatetext}>SAVE</h1>
+          <h1 className={styles.alexbrushregular}>The</h1>
+          <h1 className={styles.savethedatetext}>DATE</h1>
+        </div>
         <p>for the wedding of</p>
         <h2>Leslie & Brian</h2>
         <p>June 5, 2026 | Minneapolis, MN.</p>

@@ -37,18 +37,39 @@
 .textCont {
   text-align: center;
 }
+.saveDateCont {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  padding-top: 20px;
+}
 .savethedatetext {
   font-size: 60px;
   font-weight: 100;
   letter-spacing: 30px;
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (max-width: 740px) {
+  .scoreboardText {
+    letter-spacing: 25px;
+  }
   .textCont {
     text-align: center;
+  }
+  .saveDateCont {
+    height: auto;
   }
   .savethedatetext {
     font-size: 40px;
     font-weight: 100;
+    margin: 0;
+  }
+  .saveDateCont {
+    display: block;
+  }
+  .alexbrushregular {
+    margin: 0;
   }
 }

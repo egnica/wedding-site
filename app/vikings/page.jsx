@@ -55,7 +55,14 @@ export default function VikingsPage() {
           <h1>{counts.packers}</h1>
         </div>
       </motion.div>
-
+      <motion.h1
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1,transition: { duration: 0.9, ease: "easeIn" }, }}
+        
+        className={styles.teamChat}
+      >
+        SKOL VIKINGS!
+      </motion.h1>
       <TrioPicture />
 
       <Hotels />

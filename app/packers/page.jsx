@@ -57,7 +57,13 @@ export default function PackersPage() {
           <h1>{counts.vikings}</h1>
         </div>
       </motion.div>
-
+      <motion.h1
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 0.9, ease: "easeIn" } }}
+        className={styles.teamChat}
+      >
+        GO PACK GO!
+      </motion.h1>
       <TrioPicture />
 
       <Hotels />

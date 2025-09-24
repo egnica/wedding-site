@@ -62,7 +62,7 @@
 /* HOTEL */
 .venueImage {
   background-image: url("https://lh3.googleusercontent.com/p/AF1QipOknmGzriX46UWl5JxOCReKGoOsMxlbGOjyCN4q=s680-w680-h510-rw");
-
+  width: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -134,6 +134,9 @@
   }
   .alexbrushregular {
     margin: 0;
+  }
+  .venueImage {
+    min-height: 300px;
   }
   .splitContain {
     grid-template-columns: 1fr;

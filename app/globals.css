@@ -2,6 +2,15 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  overscroll-behavior: none; /* blocks pull-to-refresh & back/forward gestures */
-  height: 100%;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+hr {
+  border: none; /* Removes the default border */
+  height: 2px; /* Sets the thickness */
+  background-color: #333; /* Sets the color */
+  width: 50%; /* Sets the width to 50% of its container */
+  margin: 40px auto; /* Centers the divider with 40px of vertical space */
 }

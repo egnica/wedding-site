@@ -59,19 +59,28 @@ function TrioPicture() {
           src="https://nciholasegner.s3.us-east-2.amazonaws.com/leslieWedding/V3.webp"
         />
       </div>
-      <div className={styles.textCont}>
+      <motion.div
+        initial={{ opacity: 0, x: 24 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
+        className={styles.textCont}
+      >
         <div className={styles.saveDateCont}>
           <h1 className={styles.savethedatetext}>SAVE</h1>
           <h1 className={styles.alexbrushregular}>The</h1>
           <h1 className={styles.savethedatetext}>DATE</h1>
         </div>
-        <p>for the wedding of</p>
-        <h2>Leslie & Brian</h2>
+        <div className={styles.venue}>
+          <p className={styles.weddingOf}>for the wedding of</p>
+          <h2 className={styles.leslieBrian}>Leslie & Brian</h2>
+        </div>
         <p>June 5, 2026 | Minneapolis, MN.</p>
-      </div>
+      </motion.div>
       <div className={styles.trioCont}>
         <AddToCalendarButton />
       </div>
+      <hr />
     </>
   );
 }

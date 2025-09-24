@@ -149,4 +149,18 @@
     text-align: center;
     margin: auto;
   }
+  .venueImage {
+    background-image: url("https://lh3.googleusercontent.com/p/AF1QipOknmGzriX46UWl5JxOCReKGoOsMxlbGOjyCN4q=s680-w680-h510-rw");
+    width: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px; /* Adjust as needed to provide scroll space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
 }

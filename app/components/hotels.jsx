@@ -41,8 +41,7 @@ function Hotels() {
         Venue Location
       </motion.h1>
       <div className={styles.venue}>
-        <a href="https://lxmpls.com/"
-        target="_blank" rel="noopener noreferrer">
+        <a href="https://lxmpls.com/" target="_blank" rel="noopener noreferrer">
           <h2>Lumber Exchange Event Center</h2>
         </a>
         <p>10 S 5th St, Minneapolis, MN 55402</p>
@@ -85,18 +84,19 @@ function Hotels() {
 
       <div className={styles.splitContain}>
         <motion.img
+          className={styles.hotelImage}
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
-          src="https://lh3.googleusercontent.com/p/AF1QipONPI0CYfDlxiNov2T5RNxXNW8qMnwKqw0IFVO-=s680-w680-h510-rw"
+          src="https://nciholasegner.s3.us-east-2.amazonaws.com/leslieWedding/ac-hotel.webp"
         />
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
-          className={styles.address}
+          className={styles.address1}
         >
           <a
             href="https://www.marriott.com/en-us/hotels/mspar-ac-hotel-minneapolis-downtown/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0"
@@ -132,6 +132,59 @@ function Hotels() {
           </a>
           <p>*Official Last Day to Book: Wednesday, May 6, 2026*</p>
         </motion.div>
+      </div>
+      <hr />
+      <div className={styles.splitContain}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.2 }}
+          className={styles.address2}
+        >
+          <a
+            href="https://www.marriott.com/en-us/hotels/mspar-ac-hotel-minneapolis-downtown/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h2>Minneapolis Marriott City Center</h2>
+          </a>
+          <p>
+            Downtown Minneapolis <br />
+            30 S 7th St, Minneapolis, MN 55402
+          </p>
+          <p>**Link Coming Soon**</p>
+
+          {/* <a
+            style={{ margin: "auto", width: "auto", textDecoration: "none" }}
+            href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1742845748015&key=GRP&guestreslink2=true&app=resvlink"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+                backgroundColor: "#b8b8b8ff",
+              }}
+              whileTap={{
+                scale: 0.9,
+                backgroundColor: "#ffffffff",
+              }}
+              className={styles.atcbButton}
+            >
+              Book Here!
+            </motion.div>
+          </a> */}
+        </motion.div>
+
+        <motion.img
+          className={styles.hotelImage}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.2 }}
+          src="https://nciholasegner.s3.us-east-2.amazonaws.com/leslieWedding/marriot.webp"
+        />
       </div>
     </div>
   );

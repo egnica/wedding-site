@@ -138,7 +138,15 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.address {
+.hotelImage {
+  width: 100%;
+}
+.address1 {
+  padding-left: 10%;
+}
+.address2 {
+  padding-right: 10%;
+  text-align: right;
 }
 .atcbButton {
   align-items: center;
@@ -197,6 +205,14 @@
     place-content: center;
   }
   .address {
+    text-align: center;
+  }
+  .address1 {
+    padding-left: 0%;
+    text-align: center;
+  }
+  .address2 {
+    padding-right: 0;
     text-align: center;
   }
   .atcbButton {

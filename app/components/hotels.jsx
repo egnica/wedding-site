@@ -14,13 +14,19 @@ function Hotels() {
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start end", "end start"],
+    offset: ["start 0.95", "end 0.05"],
   });
 
   const y = useTransform(
     scrollYProgress,
     [0, 1],
-    prefersReduced ? ["0%", "0%"] : ["-15%", "15%"]
+    prefersReduced ? ["0%", "0%"] : ["-35%", "35%"]
+  );
+
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 1],
+    prefersReduced ? [1, 1] : [1.15, 1.05] // starts zoomed-in a bit
   );
   return (
     <div className={styles.hotelContain}>
@@ -45,7 +51,7 @@ function Hotels() {
             src="https://lh3.googleusercontent.com/p/AF1QipOknmGzriX46UWl5JxOCReKGoOsMxlbGOjyCN4q=s680-w680-h510-rw"
             alt="Venue"
             className={styles.venueImage}
-            style={{ y }}
+            style={{ y, scale }}
             aria-hidden
           />
           <div className={styles.venueContent}>

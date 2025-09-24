@@ -41,7 +41,8 @@ function Hotels() {
         Venue Location
       </motion.h1>
       <div className={styles.venue}>
-        <a href="https://lxmpls.com/">
+        <a href="https://lxmpls.com/"
+        target="_blank" rel="noopener noreferrer">
           <h2>Lumber Exchange Event Center</h2>
         </a>
         <p>10 S 5th St, Minneapolis, MN 55402</p>
@@ -69,6 +70,7 @@ function Hotels() {
           style={{ width: "100%" }}
         /> */}
       </div>
+
       <hr />
       <motion.h1
         initial={{ opacity: 0, x: 24 }}
@@ -96,7 +98,11 @@ function Hotels() {
           viewport={{ once: true, amount: 0.2 }}
           className={styles.address}
         >
-          <a href="https://www.marriott.com/en-us/hotels/mspar-ac-hotel-minneapolis-downtown/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0">
+          <a
+            href="https://www.marriott.com/en-us/hotels/mspar-ac-hotel-minneapolis-downtown/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <h2>AC Hotel</h2>
           </a>
           <p>
@@ -107,9 +113,24 @@ function Hotels() {
           <a
             style={{ margin: "auto", width: "auto", textDecoration: "none" }}
             href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1742845748015&key=GRP&guestreslink2=true&app=resvlink"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <div className={styles.atcbButton}>Book Here!</div>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+                backgroundColor: "#b8b8b8ff",
+              }}
+              whileTap={{
+                scale: 0.9,
+                backgroundColor: "#ffffffff",
+              }}
+              className={styles.atcbButton}
+            >
+              Book Here!
+            </motion.div>
           </a>
+          <p>*Official Last Day to Book: Wednesday, May 6, 2026*</p>
         </motion.div>
       </div>
     </div>

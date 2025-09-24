@@ -29,6 +29,7 @@ export default function VikingsPage() {
 
   return (
     <main>
+      <div className={styles.background} />
       <div style={{ paddingTop: "40px" }}></div>
       <motion.p
         initial={{ opacity: 0 }}

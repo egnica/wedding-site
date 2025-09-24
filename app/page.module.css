@@ -60,20 +60,46 @@
 }
 
 /* HOTEL */
+
+.venueSection {
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+  display: grid;
+  place-items: center;
+}
 .venueImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+  transform: translateZ(0);
+}
+.venueContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* .venueImage {
   background-image: url("https://lh3.googleusercontent.com/p/AF1QipOknmGzriX46UWl5JxOCReKGoOsMxlbGOjyCN4q=s680-w680-h510-rw");
   width: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 500px; /* Adjust as needed to provide scroll space */
+  min-height: 500px; 
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   text-align: center;
-}
+} */
 .venue {
   line-height: 0em;
   text-align: center;
@@ -149,6 +175,7 @@
     text-align: center;
     margin: auto;
   }
+
   .venueImage {
     background-image: url("https://lh3.googleusercontent.com/p/AF1QipOknmGzriX46UWl5JxOCReKGoOsMxlbGOjyCN4q=s680-w680-h510-rw");
     width: 100%;

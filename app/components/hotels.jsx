@@ -1,9 +1,27 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useReducedMotion,
+} from "framer-motion";
 
 import styles from "../page.module.css";
 
 function Hotels() {
+  const sectionRef = useRef(null); // ✅ real ref object
+  const prefersReduced = useReducedMotion();
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const y = useTransform(
+    scrollYProgress,
+    [0, 1],
+    prefersReduced ? ["0%", "0%"] : ["-15%", "15%"]
+  );
   return (
     <div className={styles.hotelContain}>
       <motion.h1
@@ -22,13 +40,28 @@ function Hotels() {
         </a>
         <p>10 S 5th St, Minneapolis, MN 55402</p>
 
-        <motion.img
+        <section ref={sectionRef} className={styles.venueSection}>
+          <motion.img
+            src="https://lh3.googleusercontent.com/p/AF1QipOknmGzriX46UWl5JxOCReKGoOsMxlbGOjyCN4q=s680-w680-h510-rw"
+            alt="Venue"
+            className={styles.venueImage}
+            style={{ y }}
+            aria-hidden
+          />
+          <div className={styles.venueContent}>
+            <h2>Venue</h2>
+            <p>Lumber Exchange · Minneapolis, MN</p>
+          </div>
+        </section>
+
+        {/* <motion.img
           className={styles.venueImage}
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
-        />
+          style={{ width: "100%" }}
+        /> */}
       </div>
       <hr />
       <motion.h1

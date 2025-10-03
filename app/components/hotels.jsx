@@ -153,7 +153,29 @@ function Hotels() {
             Downtown Minneapolis <br />
             30 S 7th St, Minneapolis, MN 55402
           </p>
-          <p>**Link Coming Soon**</p>
+          <div className={styles.atcbButton2}>
+            <a
+              style={{ margin: "auto", width: "auto", textDecoration: "none" }}
+              href="https://book.passkey.com/event/51125925/owner/1070/home"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <motion.div
+                style={{ textAlign: "right" }}
+                whileHover={{
+                  scale: 1.1,
+                  backgroundColor: "#b8b8b8ff",
+                }}
+                whileTap={{
+                  scale: 0.9,
+                  backgroundColor: "#ffffffff",
+                }}
+                className={styles.atcbButton}
+              >
+                Book Here!
+              </motion.div>
+            </a>
+          </div>
 
           {/* <a
             style={{ margin: "auto", width: "auto", textDecoration: "none" }}

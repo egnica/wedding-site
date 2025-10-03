@@ -74,12 +74,11 @@
   letter-spacing: 30px;
 }
 .weddingOf {
-  letter-spacing: 13px;
+  letter-spacing: 9px;
 }
 .leslieBrian {
   font-size: 40px;
   font-weight: 100;
-  letter-spacing: 10px;
 }
 
 /* HOTEL */
@@ -168,6 +167,11 @@
   font-weight: 800;
   font-size: large;
 }
+.atcbButton2 {
+  position: absolute;
+  right: 55%;
+  width: 260px;
+}
 .atcbButton:hover {
 }
 
@@ -194,6 +198,9 @@
   .saveDateCont {
     display: block;
   }
+  .weddingOf {
+    letter-spacing: 6px;
+  }
   .alexbrushregular {
     margin: 0;
   }
@@ -218,6 +225,15 @@
   .atcbButton {
     text-align: center;
     margin: auto;
+  }
+  .atcbButton2 {
+    position: relative;
+    display: block;
+    text-align: center;
+    left: 20%;
+    right: 0%;
+    width: 420px;
+    padding-bottom: 20px;
   }
 
   .venueImage {

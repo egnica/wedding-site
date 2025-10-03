@@ -229,8 +229,9 @@
   .atcbButton2 {
     position: relative;
     display: block;
+    margin: auto;
     text-align: center;
-    left: 20%;
+    left: 0%;
     right: 0%;
     width: 420px;
     padding-bottom: 20px;

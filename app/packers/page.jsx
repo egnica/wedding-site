@@ -5,11 +5,12 @@ import dynamic from "next/dynamic";
 import styles from "../page.module.css";
 import TrioPicture from "../components/trioPicture";
 import Hotels from "../components/hotels";
+import Registration from "../components/registration";
 const AddToCalendarButton = dynamic(
   () => import("../components/calendarButton"),
   {
     ssr: false,
-  }
+  },
 );
 
 export default function PackersPage() {
@@ -65,7 +66,7 @@ export default function PackersPage() {
         GO PACK GO!
       </motion.h1>
       <TrioPicture />
-
+      <Registration />
       <Hotels />
       <div style={{ paddingTop: "40px" }}></div>
     </main>

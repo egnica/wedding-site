@@ -11,7 +11,6 @@ function registration() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.2 }}
         className={styles.saveTitle}
-        className={styles.saveTitle}
         style={{ textAlign: "center" }}
       >
         Registry Links

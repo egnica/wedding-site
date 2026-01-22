@@ -42,7 +42,7 @@ function registration() {
 
           <a
             target="_blank"
-            href="https://docs.google.com/spreadsheets/d/1ySW6M-LtW-nz_I8prJpbv3ArbK-RCBd4MRHwtj04MVA/edit?usp=sharing"
+            href="https://www.amazon.com/wedding/guest-view/1W9X0WX0GPZDH"
           >
             <motion.div
               whileHover={{

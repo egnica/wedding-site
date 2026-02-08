@@ -20,13 +20,13 @@ function Hotels() {
   const y = useTransform(
     scrollYProgress,
     [0, 1],
-    prefersReduced ? ["0%", "0%"] : ["-35%", "35%"]
+    prefersReduced ? ["0%", "0%"] : ["-35%", "35%"],
   );
 
   const scale = useTransform(
     scrollYProgress,
     [0, 1],
-    prefersReduced ? [1, 1] : [1.15, 1.05] // starts zoomed-in a bit
+    prefersReduced ? [1, 1] : [1.15, 1.05], // starts zoomed-in a bit
   );
   return (
     <div className={styles.hotelContain}>
@@ -107,7 +107,7 @@ function Hotels() {
           </a>
           <p>
             Downtown Minneapolis <br />
-            41 Hennepin Ave, Minneapolis, MN 55401
+            401 Hennepin Ave, Minneapolis, MN 55401
           </p>
 
           <a

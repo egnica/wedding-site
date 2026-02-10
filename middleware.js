@@ -1,3 +1,4 @@
+//middleware.js
 import { NextResponse } from "next/server";
 const PACKERS_DOMAIN = "lesliedoesthelambeauleap.com";
 const VIKINGS_DOMAIN = "martinminneapolismiracle.com";

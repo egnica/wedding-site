@@ -60,6 +60,28 @@ function registration() {
             </motion.div>
           </a>
         </div>
+        <div className={styles.registrationCard}>
+          <h3>Zelle</h3>
+
+          <a
+            target="_blank"
+            href="https://enroll.zellepay.com/qr-codes?data=eyJ0b2tlbiI6ImJyaWFuMjhtYXJ0aW5AZ21haWwuY29tIiwibmFtZSI6IkJyaWFuIn0="
+          >
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+                backgroundColor: "#b8b8b8ff",
+              }}
+              whileTap={{
+                scale: 0.9,
+                backgroundColor: "#ffffffff",
+              }}
+              className={styles.atcbButton}
+            >
+              Enter Here
+            </motion.div>
+          </a>
+        </div>
       </div>
       <hr />
     </>

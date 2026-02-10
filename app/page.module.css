@@ -1,3 +1,11 @@
+/* Nav Bar */
+.navUl {
+  display: flex;
+  gap: 20px;
+  text-align: center;
+  padding-right: 30px;
+}
+
 .alexbrushregular {
   font-family: "Alex Brush", cursive;
   font-weight: 400;
@@ -179,7 +187,7 @@
 
 .registrationContain {
   display: grid;
-  grid-template-columns: 0.3fr 0.3fr;
+  grid-template-columns: 0.3fr 0.3fr 0.3fr;
   place-content: center;
 }
 
@@ -192,6 +200,15 @@
 .regLinkBtn {
 }
 @media screen and (max-width: 760px) {
+  .registrationContain {
+  grid-template-columns: 0.3fr;
+ 
+}
+.registrationCard {
+
+  padding: 5px;
+  width: 300px;
+}
   .scoreboardText {
     letter-spacing: 25px;
   }
@@ -268,7 +285,59 @@
     text-align: center;
   }
   .registrationCard {
-
-  width: 140px;
+    width: 140px;
+  }
 }
+
+/* Pictures Page */
+.picturesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.blkBackground {
+  background-color: #00000096;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-top: 20px;
+
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  place-content: center;
+}
+.displayImage {
+  height: 80vh;
+  padding: 50px;
+}
+.exitOutImage {
+  background-color: #f5f5f5;
+  padding: 10px;
+  max-height: 20px;
+  display: grid;
+  place-content: center;
+  border-radius: 20px;
+  transition: ease-in-out 0.2s;
+}
+.exitOutImage:hover {
+  scale: 1.07;
+  cursor: pointer;
+}
+.thumb {
+  position: relative;
+  width: clamp(140px, 18vw, 240px);
+  aspect-ratio: 4 / 5; /* portrait-leaning frame */
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.thumb:hover {
+  scale: 1.04;
 }

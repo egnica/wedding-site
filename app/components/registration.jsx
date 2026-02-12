@@ -60,8 +60,11 @@ function registration() {
             </motion.div>
           </a>
         </div>
-        <div className={styles.registrationCard}>
-          <h3>Zelle</h3>
+        <div className={`${styles.registrationCard}`}>
+          <div className={styles.zelle}>
+            <h3>Zelle</h3>
+            <p>*Honeymoon/House Projects Fund*</p>
+          </div>
 
           <a
             target="_blank"

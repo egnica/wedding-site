@@ -1,6 +1,8 @@
 /* Nav Bar */
 .navUl {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   text-align: center;
   padding-right: 30px;
@@ -197,18 +199,24 @@
   padding: 20px;
   width: 300px;
 }
+.zelle h3 {
+  margin: 0;
+}
+
+.zelle p {
+  margin: 9;
+}
+
 .regLinkBtn {
 }
 @media screen and (max-width: 760px) {
   .registrationContain {
-  grid-template-columns: 0.3fr;
- 
-}
-.registrationCard {
-
-  padding: 5px;
-  width: 300px;
-}
+    grid-template-columns: 0.3fr;
+  }
+  .registrationCard {
+    padding: 5px;
+    width: 300px;
+  }
   .scoreboardText {
     letter-spacing: 25px;
   }

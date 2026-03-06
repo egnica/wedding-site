@@ -6,6 +6,8 @@ function normalizeMeal(meal) {
   return String(meal);
 }
 
+const messageBoard = [];
+
 function buildRows(invites) {
   const attending = [];
   const notAttending = [];
@@ -25,6 +27,11 @@ function buildRows(invites) {
     const rsvp = invite.rsvp ?? null;
     const selections = rsvp?.selections ?? {};
     const householdStatus = rsvp?.status ?? null;
+    const message = invite.rsvp.note;
+
+    if (message != "") {
+      messageBoard.push(`${householdTitle} - ${message}`);
+    }
 
     // Flag: household declined but any individual isn't explicitly false
     if (householdStatus === "declined") {
@@ -157,6 +164,12 @@ export default async function AdminPage() {
             </ul>
           </>
         )}
+      </section>
+      <section style={{ marginBottom: 16 }}>
+        <h2>Messages</h2>
+        {messageBoard.map((item, index) => (
+          <p key={index}>{item}</p>
+        ))}
       </section>
 
       <section style={{ marginBottom: 16 }}>

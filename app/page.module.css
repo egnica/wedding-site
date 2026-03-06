@@ -15,6 +15,13 @@
   letter-spacing: 1px;
   font-size: 90px;
 }
+.alexbrushregularTWO {
+  font-family: "Alex Brush", cursive;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 50px;
+}
 .background {
   position: fixed;
   top: 0;
@@ -348,4 +355,56 @@
 
 .thumb:hover {
   scale: 1.04;
+}
+
+/* FAQ PAGE */
+.faqContain {
+  padding: 0 0 0 20px;
+}
+.olFAQ li {
+  font-size: 1.5em;
+  font-weight: 800;
+  padding-top: 20px;
+}
+.olFAQ p {
+  margin: 0;
+
+  font-size: 1.3em;
+  padding-left: 20px;
+}
+/* FOOTER */
+.footer {
+  background-color: #333;
+  padding: 1%;
+  width: 100vw;
+}
+.footerLink {
+  display: flex;
+  color: #e0ddf7;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
+  transition: ease-in-out 0.2s;
+}
+.footerLink:hover {
+  scale: 1.1;
+}
+.mailLink {
+  color: #7260f5;
+}
+.insideFooter {
+  display: grid;
+  place-content: center;
+  color: #e0ddf7;
+  text-align: center;
+}
+.insideFooter p {
+  letter-spacing: 2px;
+  margin: 0;
+}
+.insideFooterTwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e0ddf7;
 }

@@ -10,6 +10,7 @@ function nav() {
         <Link href={"../pictures"}>
           Engagement <br /> Photos
         </Link>
+        <Link href={"../faq"}>FAQ</Link>
       </ul>
     </nav>
   );

@@ -6,6 +6,7 @@ import styles from "../page.module.css";
 import TrioPicture from "../components/trioPicture";
 import Hotels from "../components/hotels";
 import Registration from "../components/registration";
+import RSVPMain from "../components/RSVP/RSVPMain";
 const AddToCalendarButton = dynamic(
   () => import("../components/calendarButton"),
   {
@@ -65,6 +66,7 @@ export default function PackersPage() {
       >
         GO PACK GO!
       </motion.h1>
+      <RSVPMain />
       <TrioPicture />
       <Registration />
       <Hotels />

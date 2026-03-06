@@ -6,6 +6,7 @@ import styles from "../page.module.css";
 import TrioPicture from "../components/trioPicture";
 import Hotels from "../components/hotels";
 import Registration from "../components/registration";
+import RSVPMain from "../components/RSVP/RSVPMain";
 const AddToCalendarButton = dynamic(
   () => import("../components/calendarButton"),
   {
@@ -63,7 +64,9 @@ export default function VikingsPage() {
       >
         SKOL VIKINGS!
       </motion.h1>
+      <RSVPMain />
       <TrioPicture />
+
       <Registration />
       <Hotels />
       <div style={{ paddingTop: "40px" }}></div>

@@ -375,8 +375,13 @@
 /* FOOTER */
 .footer {
   background-color: #333;
-  padding: 1%;
+  padding: 2%;
   width: 100vw;
+}
+.footer img {
+  width: 80vw;
+  display: grid;
+  place-content: center;
 }
 .footerLink {
   display: flex;

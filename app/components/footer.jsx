@@ -4,6 +4,7 @@ import styles from "../page.module.css";
 function footer() {
   return (
     <footer className={styles.footer}>
+      <hr style={{ backgroundColor: "white", margin: "15px auto" }} />
       <div className={styles.insideFooter}>
         <p>This website was created by: &nbsp;</p>
         <a

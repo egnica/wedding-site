@@ -388,6 +388,7 @@
 }
 .footerLink:hover {
   scale: 1.1;
+  color: #b8afff;
 }
 .mailLink {
   color: #7260f5;
@@ -407,4 +408,7 @@
   justify-content: center;
   align-items: center;
   color: #e0ddf7;
+}
+.insideFooterTwo p {
+  margin: 0;
 }

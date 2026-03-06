@@ -16,7 +16,7 @@ function footer() {
         </a>
       </div>
       <div className={styles.insideFooterTwo}>
-        <p>Questions regrading issues with RSVP: </p>&nbsp;
+        <p>Issues with RSVP: </p>&nbsp;
         <a className={styles.mailLink} href="mailto:nick@nicholasegner.com">Click Here</a>
       </div>
     </footer>

@@ -152,6 +152,7 @@ export default function RSVPForm({ invite }) {
               onChange={(e) => setNote(e.target.value)}
               rows={3}
               style={{ width: "100%", maxWidth: 520 }}
+              placeholder="Special notes and song ideas here!"
             />
           </label>
         </div>

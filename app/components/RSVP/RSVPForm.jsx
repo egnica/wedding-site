@@ -243,10 +243,16 @@ export default function RSVPForm({ invite }) {
                       </label>
                     </div>
                   )}
+
                   {meal == "braised_short_rib" ? (
                     <p>Braised Short Rib: *contains dairy and nuts*</p>
                   ) : meal == "pan_seared_walleye" ? (
                     <p>Pan-Seared Walleye: *contains dairy*</p>
+                  ) : meal == "squash_risotto" ? (
+                    <p>
+                      Squash Risotto: *contains dairy* - can be made vegan. Make
+                      note in note section.{" "}
+                    </p>
                   ) : null}
                 </div>
               );

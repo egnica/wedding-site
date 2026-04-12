@@ -11,6 +11,9 @@ function nav() {
           Engagement <br /> Photos
         </Link>
         <Link href={"../faq"}>FAQ</Link>
+        <Link href={"../wedding-party"}>
+          Wedding <br /> Party
+        </Link>
       </ul>
     </nav>
   );

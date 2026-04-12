@@ -124,6 +124,13 @@ function page() {
       pic: "https://nciholasegner.s3.us-east-2.amazonaws.com/leslieWedding/weddingParty/Laiya-Restivo.png",
       group: "groom",
     },
+    {
+      name: "Jake Rath",
+      title: "Groomsman (Friend from College)",
+      link: "https://www.facebook.com/jake.rath.291941",
+      pic: "https://nciholasegner.s3.us-east-2.amazonaws.com/leslieWedding/weddingParty/jake-rath.png",
+      group: "groom",
+    },
 
     // Personal Attendants
     {
